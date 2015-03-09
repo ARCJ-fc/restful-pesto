@@ -1,5 +1,5 @@
 var shot = require("shot");
-var server = require("../handler");
+var server = require("../lib/handler");
 var assert = require("assert");
 var request;
 
