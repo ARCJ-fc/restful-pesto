@@ -12,4 +12,4 @@ gulp.task("watch-mocha", function() {
     gulp.watch(["lib/**.js", "test/**.js"], ["mocha"]);
 });
 
-gulp.task("default", ["watch-mocha"]);
+gulp.task("default", ["mocha","watch-mocha"]);
