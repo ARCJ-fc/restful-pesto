@@ -12,7 +12,7 @@ describe("The home page", function() {
             url: "/"
         };
 
-        shot.inject(server, request, function(res) {
+        shot.inject(server.home, request, function(res) {
             assert.equal(res.statusCode, 200);
             done();
         });
@@ -30,7 +30,7 @@ describe("The posts page", function() {
             url: "/posts"
         };
 
-        shot.inject(server, request, function(res) {
+        shot.inject(server.posts, request, function(res) {
             assert.equal(res.statusCode, 200);
             done();
         });
@@ -47,7 +47,7 @@ describe("A nonexistant page", function() {
             url: "/postalhost"
         };
 
-        shot.inject(server, request, function(res) {
+        shot.inject(server.invalid, request, function(res) {
             assert.equal(res.statusCode, 404);
             done();
         });
