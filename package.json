@@ -8,12 +8,16 @@
     "test": "test"
   },
   "dependencies": {
-    "jade": "^1.9.2"
+    "jade": "^1.9.2",
+    "mongodb-uri": "^0.9.7",
+    "mongoose": "^3.8.24"
   },
   "devDependencies": {
     "gulp": "^3.8.11",
+    "gulp-jshint": "^1.9.2",
     "gulp-mocha": "^2.0.0",
     "gulp-util": "^3.0.4",
+    "jshint-stylish": "^1.0.1",
     "mocha": "^2.2.0",
     "shot": "^1.4.2"
   },
