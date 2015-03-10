@@ -6,6 +6,8 @@
   "repository": "https://github.com/ARCJ-fc/restful-pesto.git",
   "directories": {
     "lib": "lib",
+  "directories": {
+    "lib" : "lib",
     "test": "test"
   },
   "dependencies": {},
