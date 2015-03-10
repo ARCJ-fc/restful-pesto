@@ -1,9 +1,11 @@
 {
-  "name": "blogplatform",
+  "name": "the restful pesto blog",
   "version": "1.0.0",
-  "description": "starter kit for blog platform",
-  "main": "server.js",
+  "description": "blogging about pesto",
+  "main": "lib/server.js",
+  "repository": "https://github.com/ARCJ-fc/restful-pesto.git",
   "directories": {
+    "lib": "lib",
     "test": "test"
   },
   "dependencies": {},
