@@ -1,13 +1,15 @@
 {
-  "name": "the restful pesto blog",
+  "name": "the-restful-pesto-blog",
   "version": "1.0.0",
   "description": "blogging about pesto",
   "main": "lib/server.js",
   "directories": {
-    "lib" : "lib",
+    "lib": "lib",
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jade": "^1.9.2"
+  },
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-mocha": "^2.0.0",

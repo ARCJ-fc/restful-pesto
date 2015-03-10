@@ -1,0 +1,13 @@
+mixin blogpost(post)
+    .postHolder
+        .headerArea
+            h1 #{post.title}
+            h3 #{post.date}
+        .contentArea
+            p #{post.content}
+            
+mixin monthlist(month)
+    h2 #{month[0].date}
+        ul
+        for post in month
+            li #{post.title}     

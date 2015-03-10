@@ -1,0 +1,59 @@
+#midbar {
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#leftbar {
+	border-right: 1px solid black;
+	position: fixed;
+	height: 100%;
+	padding-top: 50px;
+}
+
+#rightbar {
+	border-left: 1px solid black;
+	position: fixed;
+	height: 100%;
+	padding-top: 50px;
+}
+
+#postList {
+	padding-left: 50px;
+}
+
+#sidebarContent {
+	text-align: center;
+}
+
+.toolbar {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+button {
+	width: 50px;
+	height: 20px;
+}
+
+.postHolder {
+	height: 300px;
+	margin-bottom: 50px;
+}
+
+#imgHolder {
+	height: 100px;
+	width: 100px;
+}
+
+.headerArea {
+	height: 120px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid grey;
+	border-top: 1px solid grey;
+}
+
+.contentArea {
+	height: 200px;
+}
