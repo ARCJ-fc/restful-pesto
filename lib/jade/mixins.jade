@@ -1,13 +1,23 @@
 mixin blogpost(post)
     .postHolder
         .headerArea
-            h1 #{post.title}
-            h3 #{post.date}
+            if post
+                h1 #{post.title}
+                h3 #{post.date}
+            else
+                input(id="newTitle")
+                input(id="newDate")
         .contentArea
-            p #{post.content}
+            if post
+                p #{post.content}
+            else
+                form
+                    textarea(id="newContent")
+                    button(type=submit, id="newSubmit")
+
             
 mixin monthlist(month)
     h2 #{month[0].date}
-        ul
+    ul
         for post in month
             li #{post.title}     
