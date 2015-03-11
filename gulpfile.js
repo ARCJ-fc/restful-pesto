@@ -15,13 +15,13 @@ gulp.task("watch-mocha", function() {
 });
 
 gulp.task("lint", function() {
-  return gulp.src("./lib/*.js")
+  return gulp.src(["lib/**.js", "text/**.js"])
     .pipe(jshint())
-    .pipe(jshint.reporter("YOUR_REPORTER_HERE"));
+    .pipe(jshint.reporter(stylish));
 });
 
 gulp.task("watch-lint", function() {
     gulp.watch(["lib/**.js", "test/**.js"], ["lint"]);
 });
 
-gulp.task("default", ["mocha","watch-mocha", "watch-lint"]);
+gulp.task("default", ["mocha","watch-mocha"]);
