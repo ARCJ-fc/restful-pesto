@@ -91,3 +91,7 @@ input {
 #newSubmit {
 	display: block;
 }
+
+#aboutText {
+	height: 60px;
+}

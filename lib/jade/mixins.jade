@@ -17,7 +17,7 @@ mixin blogpost(post)
 
             
 mixin monthlist(month)
-    h2 #{(month[0] && month[0].date) || "No date found!"}
+    h2 #{(month[0] && month[0].date)}
     ul
         for post in month
-            li #{(post && post.title) || "No title found"}     
+            li #{(post && post.title)}     
