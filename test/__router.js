@@ -2,6 +2,7 @@ var shot    = require("shot");
 var server  = require("../lib/handler");
 var assert  = require("assert");
 var fs      = require("fs");
+
 var request;
 
 describe("The home page", function() {
@@ -14,7 +15,7 @@ describe("The home page", function() {
         
         shot.inject(server.home, request, function(res) {
             assert.equal(res.statusCode, 200);
-            assert.equal(res["Content-Type"], "text/html")
+            assert.equal(res.headers["Content-Type"], "text/html")
             done();
         });
     });
@@ -30,7 +31,7 @@ describe("The create post page", function() {
 
         shot.inject(server.createPost, request, function(res) {
             assert.equal(res.statusCode, 200);
-            assert.equal(res["Content-Type"], "text/html")
+            assert.equal(res.headers["Content-Type"], "text/html")
             done();
         });
     })
@@ -46,7 +47,7 @@ describe("The css page", function() {
 
         shot.inject(server.css, request, function(res) {
             assert.equal(res.statusCode, 200);
-            assert.equal(res["Content-Type"], "text/css");
+            assert.equal(res.headers["Content-Type"], "text/css");
             done();
         });
     });
