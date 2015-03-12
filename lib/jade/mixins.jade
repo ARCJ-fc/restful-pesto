@@ -5,13 +5,13 @@ mixin blogpost(post)
                 h1 #{post.title}
                 h3 #{post.date}
             else
-                input(id="newTitle")
-                input(id="newDate")
+                input(id="newTitle" placeholder="Title")
+                input(id="newDate" placeholder="Date")
         .contentArea
             if post
                 p #{post.content}
             else
-                textarea(id="newContent")
+                textarea(id="newContent" placeholder="Share your thoughts...")
                 button(type=submit, id="newSubmit")
 
 
