@@ -16,7 +16,12 @@ mixin blogpost(post)
 
 
 mixin monthlist(month)
-    h2 #{(month[0] && month[0].date)}
+    h2 #{(month[0] && month[0].tags[0])}
     ul
         for post in month
             li #{(post && post.title)}
+
+mixin loginbar(loggedin)
+    a(href="/auth", class="loginlink")
+        div(role="toolbar", class="loginbar")
+            div(class="glyphicon glyphicon-user")
