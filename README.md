@@ -14,7 +14,7 @@ A simple blog for simple people.
 1. Download it!
 2. node lib/server.js!
 3. Get an error!
-4. Create a credentials file in lib, and enter your mongolab DB access stuff (or ask rory for his)
+4. Ask rory on gitter for his credentials.js
 5. node lib/server.js!
 ```
 
