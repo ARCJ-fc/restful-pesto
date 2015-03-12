@@ -16,14 +16,16 @@
 	position: fixed;
 	height: 100%;
 	padding-top: 50px;
+	padding-left: 0px;
 }
 
-#postList {
-	padding-left: 70px;
+#postlist {
+	margin-left: 15px;
 }
 
 #sidebarContent {
 	text-align: center;
+	margin-left: 15px;
 }
 
 .toolbar {
@@ -101,3 +103,33 @@ input {
 #aboutText {
 	height: 60px;
 }
+
+.loginbar {
+	text-align: center;
+	width: inherit;
+	background-color: hsl(96, 60%, 85%);
+	position: fixed;
+	top: 0;
+}
+
+.loginlink {
+	width: inherit;
+}
+
+.loginbar:hover {
+	background-color: hsl(96, 0%, 70%);
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+a:active {
+	color: grey;
+	text-decoration: none;
+};

@@ -14,11 +14,7 @@ html
                 +blogpost(post)
 
         div(class="col-md-3 col-md-offset-9", id="rightbar")
-
-            div(role="toolbar", class="btn-group toolbar")
-                button(class="btn-group")
-                button(class="btn-group")
-                button(class="btn-group")
+            +loginbar
 
             div(id="postlist")
                 for month in months

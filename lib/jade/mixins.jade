@@ -20,3 +20,8 @@ mixin monthlist(month)
     ul
         for post in month
             li #{(post && post.title)}
+
+mixin loginbar(loggedin)
+    a(href="/auth", class="loginlink")
+        div(role="toolbar", class="loginbar")
+            div(class="glyphicon glyphicon-user")
