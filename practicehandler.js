@@ -7,31 +7,22 @@ var secret = "CHANGE_THIS_TO_SOMETHING_RANDOM"; // super secret
 var querystring = require('querystring');
 
 
-function authFail(req,res){
-	res.writeHead(401, {'Content-Type': 'text/html'});
-	var fn = jade.compileFile(path + "/fail.jade");
-	res.end(fn(test_data));
-}
-
-
-// Question: Why are we doing this?
+// ******************
 function generateGUID() {
   return new Date().getTime();
 }
 
-
 function generateToken(req, GUID){
 	var token = jwt.sign({
 		auth: GUID,
-		agent: req.headers['user-agent'], // Question: What it this?
-		exp: new Date().getTime() + 7*24*60*60*1000 // Question: so this token expires sometime?
+		agent: req.headers['user-agent'],
+		exp: new Date().getTime() + 7*24*60*60*1000;
 	}, secret);
 	return token;
 }
 
-
 function authSuccess(req,res){
-	var GUID = generateGUID(); // Question: What is this?
+	var GUID = generateGUID();
 	var token = generateToken(req,GUID);
 	var record = {
 		valid: "true",
@@ -66,26 +57,26 @@ function writeTokenToDB(GUID, record, callback) {
 	callback;
 }
 
-
- function authHandler(req,res){
-		if (req.method === 'POST'){
-			var body = '';
-			req.on('data', function(data){
-				body += data;
-			});
-			req.on('end', function(){
-				var post = querystring.parse(body);
-				if (post.username && post.username === u.un && post.password && post.password == u.pw){
-					return authSuccess(req,res);
-				} else {
-					return authFail(req,res);
-				}
-			});
-		} else {
-			return authFail(req, res);
-		}
+function authHandler(req,res){
+	if (req.method === 'POST'){
+		var body = '';
+		req.on('data', function(data){
+			body += data;
+		});
+		req.on('end', function(){
+			var post = querystring.parse(body);
+			if (post.username && post.username === u.un && post.password && post.password == u.pw){
+				return authSuccess(req,res);
+			} else {
+				return authFail(req,res);
+			}
+		});
+	} else {
+		return authFail(req, res);
 	}
 }
+
+// ------------------
 
 // ******************
 function verify(token){
