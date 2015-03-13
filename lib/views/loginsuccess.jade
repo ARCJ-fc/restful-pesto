@@ -5,17 +5,14 @@ html
     head
         include ./jade/head.jade
         script(type="text/javascript", src="https://code.jquery.com/jquery-1.11.2.min.js")
-        script(type="text/javascript", src="/createpost.js")
+        script(type="text/javascript", src="/loginsuccess.js")
 
     body
         div(class="col-md-3", id="leftbar")
             include ./jade/leftbar.jade
 
         div(class="col-xs-6 col-md-offset-3", id="midbar")
-            form(id="loginform")
-                input(type="text", id="username", placeholder="Username")
-                input(type="text", id="password", placeholder="Password")
-                button(type="submit", id="submitcreds")
+            h1 successful login!
 
         div(class="col-md-3 col-md-offset-9", id="rightbar")
             +loginbar
